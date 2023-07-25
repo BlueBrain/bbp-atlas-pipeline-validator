@@ -1,0 +1,15 @@
+stages:
+  - lint
+  - test
+  - deploy
+
+run-black-check-on-backend:
+  stage: lint
+  image: pyfound/black:22.12.0
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push"'
+      when: on_success
+  before_script:
+    - black --version
+  script:
+    - black . --check
