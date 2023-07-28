@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "properties": {
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rule": {
+            "type": "string"
+          },
+          "execute": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "brainRegion": {
+                   "type": "string"
+                },
+                "container": {
+                  "type": "string",
+                  "pattern": "^docker:\\/\\/\\S+$"
+                },
+                "command": {
+                   "type": "string"
+                }
+              },
+              "required": ["brainRegion", "command"]
+            }
+          }
+        },
+        "required": [
+          "rule",
+          "execute"
+        ]
+      }
+    }
+  },
+  "required": ["rules"]
+}

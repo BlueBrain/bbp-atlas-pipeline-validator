@@ -1,0 +1,66 @@
+{
+  "@context": "https://neuroshapes.org",
+  "@id": "http://bbp.epfl.ch/neurosciencegraph/ontologies/core/brainregion",
+  "@type": "Ontology",
+  "title": "Brain Region Ontology",
+  "versionInfo": "R103",
+  "hasHierarchyView": [
+    {
+      "@id": "https://bbp.epfl.ch/ontologies/core/bmo/BrainLayer",
+      "label": "Layer",
+      "description": "Layer based hierarchy",
+      "hasParentHierarchyProperty": "isLayerPartOf",
+      "hasChildrenHierarchyProperty": "hasLayerPart",
+      "hasLeafHierarchyProperty": "hasLayerLeafRegionPart"
+    },
+    {
+      "@id": "https://neuroshapes.org/BrainRegion",
+      "label": "BrainRegion",
+      "description": "Atlas default brain region hierarchy",
+      "hasParentHierarchyProperty": "isPartOf",
+      "hasChildrenHierarchyProperty": "hasPart",
+      "hasLeafHierarchyProperty": "hasLeafRegionPart"
+    }
+  ],
+  "atlasRelease": {
+    "@id": "https://bbp.epfl.ch/neurosciencegraph/data/4906ab85-694f-469d-962f-c0174e901885",
+    "@type": "BrainAtlasRelease",
+    "_rev": 3
+  },
+  "defines": [
+    {
+      "@id": "http://api.brain-map.org/api/v2/data/Structure/1"
+    },
+    {
+      "@id": "http://api.brain-map.org/api/v2/data/Structure/2",
+      "isPartOf": [
+        "http://api.brain-map.org/api/v2/data/Structure/1"
+      ]
+    },
+    {
+      "@id": "http://api.brain-map.org/api/v2/data/Structure/3",
+      "isPartOf": [
+        "http://api.brain-map.org/api/v2/data/Structure/2"
+      ]
+    },
+    {
+      "@id": "http://api.brain-map.org/api/v2/data/Structure/4",
+      "isPartOf": [
+        "http://api.brain-map.org/api/v2/data/Structure/1"
+      ]
+    },
+    {
+      "@id": "http://api.brain-map.org/api/v2/data/Structure/5",
+      "isPartOf": [
+        "http://api.brain-map.org/api/v2/data/Structure/4"
+      ]
+    },
+    {
+      "@id": "http://api.brain-map.org/api/v2/data/Structure/6",
+      "isPartOf": [
+        "http://api.brain-map.org/api/v2/data/Structure/5"
+      ]
+    }
+  ],
+  "label": "Brain Region Ontology"
+}

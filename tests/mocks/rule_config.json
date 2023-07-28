@@ -1,0 +1,40 @@
+{
+  "rules":[
+    {
+      "rule": "placement_hints",
+      "execute":
+        [
+          {
+            "brainRegion": "http://api.brain-map.org/api/v2/data/Structure/1",
+            "container": "docker://image-for-cerebellum-placement-hints",
+            "command": "user_cli --annotation-path {input.annotation} --hierarchy-path {input.hierarchy} --direction-vectors-path {input.direction_vectors} --output-dir {output} --token {token}"
+          },
+          {
+            "brainRegion": "http://api.brain-map.org/api/v2/data/Structure/2",
+            "container": "docker://image-for-thalamus-placement-hints",
+            "command": "user_cli --annotation-path {input.annotation} --hierarchy-path {input.hierarchy} --direction-vectors-path {input.direction_vectors} --output-dir {output}"
+          },
+          {
+            "brainRegion": "http://api.brain-map.org/api/v2/data/Structure/3",
+            "container": "docker://image-for-thalamus-placement-hints",
+            "command": "user_cli --annotation-path {input.annotation} --hierarchy-path {input.hierarchy} --direction-vectors-path {input.direction_vectors} --output-dir {output}"
+          }
+        ]
+    },
+    {
+      "rule": "another_rule",
+      "execute": [
+        {
+          "brainRegion": "http://api.brain-map.org/api/v2/data/Structure/1",
+          "container": "docker://image-for-cerebellum-placement-hints",
+          "command": "user_cli --annotation-path {input.annotation} --hierarchy-path {input.hierarchy} --direction-vectors-path {input.direction_vectors} --output-dir {output}"
+        },
+        {
+          "brainRegion": "http://api.brain-map.org/api/v2/data/Structure/2",
+          "container": "docker://image-for-thalamus-placement-hints",
+          "command": "user_cli --annotation-path {input.annotation} --hierarchy-path {input.hierarchy} --direction-vectors-path {input.direction_vectors} --output-dir {output}"
+        }
+      ]
+    }
+  ]
+}
