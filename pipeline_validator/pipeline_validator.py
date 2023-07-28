@@ -1,8 +1,7 @@
-import argparse
 import json
 from logger import logger
-from validator.rule_validator import RuleValidator
-from validator.schema_validator import SchemaValidator
+from pipeline_validator.validator.rule_validator import RuleValidator
+from pipeline_validator.validator.schema_validator import SchemaValidator
 
 
 def open_config(file: str) -> dict:

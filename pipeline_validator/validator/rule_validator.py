@@ -1,15 +1,19 @@
 import re
 
 from bigtree import find_names, find_name
-from exceptions import (
+from pipeline_validator.exceptions import (
     BrainRegionNotFoundException,
     IncorrectBrainRegionOrderException,
     InvalidCommandException,
 )
-from fetchers.brain_region_ontology_fetcher import BrainRegionOntologyFetcher
-from logger import logger
-from validator.brain_region_tree_handler import BrainRegionTreeHandler
-from validator.validator import Validator
+from pipeline_validator.fetchers.brain_region_ontology_fetcher import (
+    BrainRegionOntologyFetcher,
+)
+from pipeline_validator.logger import logger
+from pipeline_validator.validator.brain_region_tree_handler import (
+    BrainRegionTreeHandler,
+)
+from pipeline_validator.validator.validator import Validator
 
 
 class RuleValidator(Validator):

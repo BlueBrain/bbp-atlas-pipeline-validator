@@ -1,15 +1,17 @@
 import json
 import unittest
 import pytest
-from exceptions import (
+from pipeline_validator.exceptions import (
     BrainRegionNotFoundException,
     IncorrectBrainRegionOrderException,
     InvalidCommandException,
 )
-from fetchers.brain_region_ontology_fetcher import BrainRegionOntologyFetcher
-from tests.utils import load_params_from_json
+from pipeline_validator.fetchers.brain_region_ontology_fetcher import (
+    BrainRegionOntologyFetcher,
+)
+from pipeline_validator.tests.utils import load_params_from_json
 from unittest.mock import patch
-from validator.rule_validator import RuleValidator
+from pipeline_validator.validator.rule_validator import RuleValidator
 
 
 class BrainRegionValidation(unittest.TestCase):

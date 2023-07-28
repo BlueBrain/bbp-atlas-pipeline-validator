@@ -2,7 +2,7 @@ import json
 import unittest
 import pytest
 from jsonschema.exceptions import ValidationError
-from validator.schema_validator import SchemaValidator
+from pipeline_validator.validator.schema_validator import SchemaValidator
 
 
 class TestRulesConfigValidation(unittest.TestCase):

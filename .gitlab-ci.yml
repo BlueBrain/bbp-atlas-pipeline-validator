@@ -23,4 +23,5 @@ run-unit-tests:
   before_script:
     - pip install .
   script:
+    - cd ./pipeline_validator
     - pytest

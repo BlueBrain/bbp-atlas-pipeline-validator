@@ -1,8 +1,8 @@
 import json
 import requests
 from config import BRAIN_REGION_ONTOLOGY_URL
-from decorators import nexus_token_is_valid
-from exceptions import BrainRegionOntologyError
+from pipeline_validator.decorators import nexus_token_is_valid
+from pipeline_validator.exceptions import BrainRegionOntologyError
 
 
 class BrainRegionOntologyFetcher:
