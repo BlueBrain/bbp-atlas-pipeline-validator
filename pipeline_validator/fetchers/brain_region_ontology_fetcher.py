@@ -1,6 +1,6 @@
 import json
 import requests
-from config import BRAIN_REGION_ONTOLOGY_URL
+from pipeline_validator.config import BRAIN_REGION_ONTOLOGY_URL
 from pipeline_validator.decorators import nexus_token_is_valid
 from pipeline_validator.exceptions import BrainRegionOntologyError
 
