@@ -32,7 +32,7 @@ class BrainRegionValidation(unittest.TestCase):
         rule_execution = {
             "brainRegion": "http://api.brain-map.org/api/v2/data/Structure/1",
             "container": "docker://image-for-cerebellum-placement-hints",
-            "command": "user_cli",
+            "CLI": {"command": "user_cli"},
         }
 
         RuleValidator(
@@ -50,7 +50,7 @@ class BrainRegionValidation(unittest.TestCase):
         rule_execution = {
             "brainRegion": "http://api.brain-map.org/api/v2/data/Structure/8",
             "container": "docker://image-for-cerebellum-placement-hints",
-            "command": "user_cli",
+            "CLI": {"command": "user_cli"},
         }
 
         with pytest.raises(BrainRegionNotFoundException):

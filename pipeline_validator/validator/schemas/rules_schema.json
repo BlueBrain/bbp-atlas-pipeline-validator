@@ -21,11 +21,20 @@
                   "type": "string",
                   "pattern": "^docker:\\/\\/\\S+$"
                 },
-                "command": {
-                   "type": "string"
+                "CLI": {
+                  "type": "object",
+                  "properties": {
+                    "command": {
+                      "type": "string"
+                    },
+                    "args": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["command"]
                 }
               },
-              "required": ["brainRegion", "command"]
+              "required": ["brainRegion", "CLI"]
             }
           }
         },

@@ -30,9 +30,9 @@ class TestRulesConfigValidation(unittest.TestCase):
             SchemaValidator(config_file_json=changed_config).validate()
 
     def test_rules_config_if_command_is_missing(self):
-        """Command is a required attribute"""
+        """CLI is a required attribute"""
         changed_config = self._rule_config
-        del changed_config["rules"][0]["execute"][0]["command"]
+        del changed_config["rules"][0]["execute"][0]["CLI"]
         with pytest.raises(ValidationError):
             SchemaValidator(config_file_json=changed_config).validate()
 
