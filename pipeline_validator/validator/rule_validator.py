@@ -93,7 +93,8 @@ class RuleValidator(Validator):
             # first check if the brain region exists
             self.validate_brain_region_existence(rule_execution["brainRegion"])
             brain_regions.append(rule_execution["brainRegion"])
-            self.validate_command(rule_execution["CLI"])
+            if "args" in rule_execution["CLI"]:
+                self.validate_command(rule_execution["CLI"]["args"])
         # then check if the brain regions appear in the correct order within the execution
         self.validate_order_of_brain_regions(brain_regions)
 
