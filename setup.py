@@ -2,6 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
     name="pipeline_validator",
+    setup_requires=["setuptools_scm"],
+    use_scm_version=True,
     packages=find_packages(),
     url="",
     license="",
