@@ -14,9 +14,6 @@ stages:
 run-python-linter:
   stage: lint
   image: pyfound/black:22.12.0
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "push"'
-      when: on_success
   before_script:
     - black --version
   script:
@@ -26,9 +23,6 @@ run-python-linter:
 run-unit-tests:
   stage: test
   image: python:3.9
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "push"'
-      when: on_success
   before_script:
     - pip install .
   script:

@@ -1,5 +1,5 @@
 import json
-from logger import logger
+from pipeline_validator.logger import logger
 from pipeline_validator.validator.rule_validator import RuleValidator
 from pipeline_validator.validator.schema_validator import SchemaValidator
 
