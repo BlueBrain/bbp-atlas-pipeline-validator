@@ -23,6 +23,6 @@ jobs:
               run: pip install .
 
             - name: Run Black
-              run: poetry run black . --check
+              run: black . --check
               working-directory: pipeline_validator
 
