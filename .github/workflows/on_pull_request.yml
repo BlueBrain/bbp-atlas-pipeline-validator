@@ -21,7 +21,6 @@ jobs:
 
             - name: Install Python dependencies
               run: pip install .
-              working-directory: pipeline_validator
 
             - name: Run Black
               run: poetry run black . --check
