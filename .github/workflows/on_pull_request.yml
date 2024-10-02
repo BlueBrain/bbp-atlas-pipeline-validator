@@ -1,0 +1,29 @@
+name: On pull request push
+
+on:
+    pull_request:
+        branches:
+            - "*"
+
+jobs:
+    linters:
+        name: Run linter and formatter 
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Check out Git repository
+              uses: actions/checkout@v4
+
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                python-version: 3.9
+
+            - name: Install Python dependencies
+              run: pip install .
+              working-directory: pipeline_validator
+
+            - name: Run Black
+              run: poetry run black . --check
+              working-directory: pipeline_validator
+
