@@ -24,7 +24,7 @@ run-unit-tests:
   stage: test
   image: python:3.9
   before_script:
-    - pip install .
+    - pip install .[dev]
   script:
     - cd ./pipeline_validator
     - pytest

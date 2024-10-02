@@ -15,6 +15,11 @@ setup(
         "bigtree[pandas]>=0.10.0",
         "pyJWT>=2.6.0",
     ],
+    extras_require={
+        "dev": [
+            "black>=23.7.0",
+        ],
+    },
     description="",
     include_package_data=True,
 )
