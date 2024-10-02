@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pipeline_validator"
+version = "0.3.2"
+authors = [
+    { name = "Blue Brain Project, EPFL" }
+]
+description = "A pipeline validator for Blue Brain Project"
+readme = "README.md"
+keywords = []
+dependencies = [
+    "jsonschema>=4.18.4",
+    "pytest>=7.4.0",
+    "requests>=2.31.0",
+    "bigtree[pandas]>=0.10.0",
+    "pyJWT>=2.6.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.7.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/BlueBrain/bbp-atlas-pipeline-validator"
