@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "setuptools_scm>=8"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "bbp-atlas-pipeline-validator"
-version = "0.3.3"
+dynamic = ["version"]
 authors = [
     { name = "Blue Brain Project, EPFL" }
 ]
@@ -24,6 +24,8 @@ classifiers = [
     "Operating System :: OS Independent",
     "Topic :: Software Development :: Libraries :: Python Modules"
 ]
+
+[tool.setuptools_scm]
 
 [project.optional-dependencies]
 dev = [

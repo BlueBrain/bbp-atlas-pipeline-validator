@@ -1,14 +1,10 @@
 # CHANGELOG
 
 
-## [0.3.3] - 02/10/2024
+## [0.3.2] - 02/10/2024
 
 - Add open sourcing requirements (LICENCE, CONTRIBUTING)
 - Add Github actions support
-
-# [0.3.2] - 02/10/2024
-
-- Skipped due to pypi limitation
 
 ## [0.3.1] - 27/11/2023
 
