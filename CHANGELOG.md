@@ -1,7 +1,7 @@
 # CHANGELOG
 
 
-## [0.3.2] - 02/10/2024
+## [0.4.0] - 03/10/2024
 
 - Add open sourcing requirements (LICENCE, CONTRIBUTING)
 - Add Github actions support
