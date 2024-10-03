@@ -3,7 +3,7 @@
 
 ## Install
 
-You can install the file by using `pip install "pipeline-validator"`
+You can install the file by using `pip install bbp-atlas-pipeline-validator`
 
 
 ## Examples
