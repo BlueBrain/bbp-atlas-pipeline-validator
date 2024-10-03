@@ -3,8 +3,8 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pipeline_validator"
-version = "0.3.2"
+name = "bbp-atlas-pipeline-validator"
+version = "0.3.3"
 authors = [
     { name = "Blue Brain Project, EPFL" }
 ]
