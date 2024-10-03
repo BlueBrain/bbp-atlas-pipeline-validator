@@ -26,6 +26,7 @@ classifiers = [
 ]
 
 [tool.setuptools_scm]
+version_scheme = 'post-release' # post release so that it will use the current tagged version
 
 [project.optional-dependencies]
 dev = [
