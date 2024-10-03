@@ -1,9 +1,9 @@
 name: On pull request push
 
 on:
-    pull_request:
-        branches:
-            - "*"
+  pull_request:
+    branches:
+        - "*"
 
 jobs:
     linters:
