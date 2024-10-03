@@ -17,7 +17,8 @@ jobs:
           python-version: 3.9
       - name: Build a source tarball
         run: |
-          python -m build
+          python -m pip install --upgrade pip
+          python -m pip install build
       - name: Publish distribution package to PyPI
         uses: pypa/gh-action-pypi-publish@master
         with:
